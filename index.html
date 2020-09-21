@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Site Responsivo FlexBox and Grid Layout</title>
+    <link rel="stylesheet" href="css/home.css">
+    <link rel="stylesheet" href="font-awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" href="animate/animate.css">
+</head>
+<body>
+    <!--HEADER TOP POSITION-->
+    <div class="div-header-top">
+        <div class="infor-website animated bounceInLeft">
+            <ul>
+                <li>
+                    <i class="fa fa-phone"></i>
+                    <p>998-989-055</p>
+                </li>
+                <li>
+                    <i class=" fa-github-square"></i>
+                    <p>antoniocampos@gmail.com</p>
+                </li>
+            </ul>
+        </div>
+        <div class="social-media animated bounceInRight">
+            <ul>
+                <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+                <li><a href="#"><i class="fa fa-instagram"></i></a></li>
+                <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+                <li><a href="#"><i class="fa fa-whatsapp"></i></a></li>
+            </ul>
+        </div>
+    </div>
+    <header class="header-top">
+        <a href="#" class="brand-logo animated bounceInLeft">HEROKU</a>
+        <nav class="navigation-menu animated bounceInRight">
+            <ul>
+                <li><a href="#" class="active">Home</a></li>
+                <li><a href="#">Sobre</a></li>
+                <li><a href="#">Tarefas</a></li>
+                <li><a href="#">Perfil</a></li>
+                <li><a href="#">Ações</a></li>
+            </ul>
+        </nav>
+        <nav class="navigation-toggler animated bounceInRight">
+            <i class="fa fa-bars"></i>
+        </nav>
+    </header>
+    <!--END HEADER TOP POSITION-->
+    <!--HERO-->
+    <section class="hero">
+        <div class="content-items animated fadeInDown">
+            <h1>HEROKU REPOSITORY</h1>
+            <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+                Quibusdam quae non odio magnam aperiam alias pariatur veniam 
+                neque vero laboriosam.
+            </p>
+            <button>LORE MORE...</button>
+        </div>        
+    </section>
+    <!--END HERO-->
+    <!--ICONS-->
+    <section class="icons-section animated bounceInLeft">
+        <h2>NOSSOS OBJECTIVOS</h2>
+        <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+            Amet iure odit enim itaque, doloribus voluptas.
+        </p>
+        <div class="content-items">
+            <div class="icon-item">
+                <i class="fa fa-users"></i>
+                <h3>CRIAÇÂO DE PROJECTOS</h3>
+                <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+                    Delectus, quibusdam?
+                </p>
+            </div>
+            <div class="icon-item">
+                <i class="fa fa-users"></i>
+                <h3>CRIAÇÂO DE PROJECTOS</h3>
+                <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+                    Delectus, quibusdam?
+                </p>
+            </div>
+            <div class="icon-item">
+                <i class="fa fa-users"></i>
+                <h3>CRIAÇÂO DE PROJECTOS</h3>
+                <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+                    Delectus, quibusdam?
+                </p>  
+            </div>
+            <div class="icon-item">
+                <i class="fa fa-users"></i>
+                <h3>CRIAÇÂO DE PROJECTOS</h3>
+                <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+                    Delectus, quibusdam?
+                </p>  
+            </div>                
+        </div>
+    </section>
+    <!--END ICONS-->
+    <section class="galeria">
+
+    </section>
+
+    <button class="goTop" title="Subir ao Topo">
+        <i class="fa fa-arrow-up"></i>
+    </button>
+
+    <script>
+        
+        // Efect Sticky in page
+        window.onscroll = ()=>{
+            myFunction();
+            scrollFunction();
+        }
+        
+        var navbar = document.querySelector('.header-top');
+        var sticky = navbar.offsetTop;
+
+        const myFunction = ()=>{
+            if(window.pageYOffset >= sticky){
+                navbar.classList.add('sticky');
+            }else{
+                navbar.classList.remove('sticky');
+            }
+        } 
+
+        // Scroll to top
+        
+        var myButton = document.querySelector('.goTop');
+        var returnPos = ['block','none'];
+        const scrollFunction = ()=>{
+            if(document.body.scrollTop > 20 || document.documentElement.scrollTop > 20){
+                myButton.style.display = returnPos[0];
+            }else{
+                myButton.style.display = returnPos[1];
+            }
+        }
+
+        const topFunction = ()=>{            
+            document.body.scrollTop = 0; 
+            document.documentElement.scrollTop = 0;
+        }
+
+        myButton.addEventListener('click',event=>{
+            event.preventDefault();
+            topFunction();
+        })
+
+    </script>
+</body>
+</html>
